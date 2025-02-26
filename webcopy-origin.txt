@@ -1,0 +1,56 @@
+Uri: https://ai-capcapital.com/
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\index.htm
+Content Type: text/html
+
+Uri: https://ai-capcapital.com/assets/img/hero-bg.webp
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\hero-bg.webp
+Content Type: image/webp
+
+Uri: https://ai-capcapital.com/assets/img/image1.webp
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\image1.webp
+Content Type: image/webp
+
+Uri: https://ai-capcapital.com/assets/img/image2.webp
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\image2.webp
+Content Type: image/webp
+
+Uri: https://ai-capcapital.com/assets/img/image5.webp
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\image5.webp
+Content Type: image/webp
+
+Uri: https://ai-capcapital.com/assets/img/Logo11.jpg
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\Logo11.jpg
+Content Type: image/jpeg
+
+Uri: https://ai-capcapital.com/assets/img/Logo11.webp
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\img\Logo11.webp
+Content Type: image/webp
+
+Uri: https://ai-capcapital.com/assets/styles/main.css
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\styles\main.css
+Content Type: text/css
+
+Uri: https://ai-capcapital.com/assets/styles/Manrope-VariableFont_wght.ttf
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\styles\Manrope-VariableFont_wght.ttf
+Content Type: application/octet-stream
+
+Uri: https://ai-capcapital.com/assets/styles/Poppins-Regular.ttf
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\assets\styles\Poppins-Regular.ttf
+Content Type: application/octet-stream
+
+Uri: https://ai-capcapital.com/cookies.html
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\cookies.html
+Content Type: text/html
+
+Uri: https://ai-capcapital.com/index.php
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\index.php.html
+Content Type: text/html
+
+Uri: https://ai-capcapital.com/privacy.html
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\privacy.html
+Content Type: text/html
+
+Uri: https://ai-capcapital.com/terms.html
+File Name: C:\Users\dimonic\Desktop\dsite\ai-capcapital.com\terms.html
+Content Type: text/html
+
