@@ -88,6 +88,8 @@
         </section>
 
 
+
+
         <section class="services" id="ai-services">
           <div class="services__container">
             <h2 class="services__title">Die besten KI-Automatisierungsdienste</h2>
@@ -134,6 +136,78 @@
         </section>
 
 
+<!-- Kontaktbereich -->
+<section class="kontakt-formular" id="kontakt">
+  <h2 class="kontakt-formular__titel">Schreib uns jetzt!</h2>
+  <div class="kontakt-formular__container">
+    <div class="kontakt-formular__inhalt">
+      <p class="kontakt-formular__text">
+        Melde dich für unseren Kurs an und starte deine Lernreise mit Unterstützung unserer Experten für Trading und Künstliche Intelligenz.
+      </p>
+      <form id="contactForm" method="post" class="kontakt-formular__form">
+  <div class="kontakt-formular__reihe">
+    <input type="text" id="nome" name="nome" placeholder="Vorname" required class="kontakt-formular__eingabe">
+    <input type="text" id="cognome" name="cognome" placeholder="Nachname" required class="kontakt-formular__eingabe">
+  </div>
+  <input type="tel" id="telefono" name="telefon" placeholder="Telefon" required class="kontakt-formular__eingabe">
+  <input type="email" id="emailInput" name="email" placeholder="E-Mail" required class="kontakt-formular__eingabe">
+
+  <button id="submitButton" type="submit" class="kontakt-formular__button">
+    Absenden
+  </button>
+</form>
+
+<div id="popupMessage" class="kontakt-formular__danke-popup" style="display: none;">
+  <p>Danke! Wir melden uns bald bei dir.</p>
+</div>
+  </div>
+</section>
+
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const nomeInput = document.getElementById("nome");
+            const cognomeInput = document.getElementById("cognome");
+            const telefonoInput = document.getElementById("telefono");
+            const emailInput = document.getElementById("emailInput");
+            const submitButton = document.getElementById("submitButton");
+            const popupMessage = document.getElementById("popupMessage");
+
+            function validateForm() {
+              const nomeValue = nomeInput.value.trim();
+              const cognomeValue = cognomeInput.value.trim();
+              const telefonoValue = telefonoInput.value.trim();
+              const emailValue = emailInput.value.trim();
+
+              submitButton.disabled = !(nomeValue && cognomeValue && telefonoValue && emailValue);
+            }
+
+            function showPopupMessage() {
+              console.log("popup")
+              popupMessage.style.display = "block";
+              setTimeout(() => {
+                popupMessage.style.display = "none";
+              }, 4000);
+            }
+
+            form.addEventListener("submit", function (event) {
+              event.preventDefault(); // Блокируем стандартную отправку формы
+              showPopupMessage();
+              form.reset();
+              validateForm();
+            });
+
+            [nomeInput, cognomeInput, telefonoInput, emailInput].forEach((input) => {
+              input.addEventListener("input", validateForm);
+            });
+
+            validateForm(); // Проверяем валидность при загрузке
+          });
+        </script>
+
+
         <!-- Statistics Section -->
         <section class="statistics">
   <div class="statistics__container">
@@ -165,177 +239,111 @@
 </section>
 
 
-      
-
-        <!-- Testimonials -->
-        <section class="testimonials" id="testimonianze">
-          <div class="testimonials__container">
-            <h2 class="testimonials__title">Cosa Dicono i Nostri Studenti</h2>
-            <div class="testimonial">
-              <div class="testimonials__stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-              </div>
-              <p class="testimonials__text">
-                "Grazie a questo corso ho imparato a sviluppare strategie di
-                trading basate su AI. Ora posso operare in modo più
-                intelligente!"
-              </p>
-              <p class="testimonials__author">Luca Ferrara</p>
-              <p class="testimonials__position">Trader Algoritmico</p>
+      <section class="ai-automation">
+        <div class="ai-automation__container">
+          <h2 class="ai-automation__title">Wie KI Ihre Arbeit optimiert</h2>
+          <div class="ai-automation__content">
+            <div class="ai-automation__item">
+              <div class="ai-automation__icon">🤖</div>
+              <h3 class="ai-automation__subtitle">Automatische Workflows</h3>
+              <p class="ai-automation__text">KI-gesteuerte Automatisierung reduziert manuelle Arbeit und steigert die Effizienz.</p>
             </div>
-            <div class="testimonial">
-              <div class="testimonials__stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-              </div>
-              <p class="testimonials__text">
-                "Il corso è ben strutturato e gli strumenti offerti sono di
-                altissima qualità. Consigliato a tutti!"
-              </p>
-              <p class="testimonials__author">Giovanna Rossi</p>
-              <p class="testimonials__position">Analista Finanziaria</p>
+            <div class="ai-automation__item">
+              <div class="ai-automation__icon">📊</div>
+              <h3 class="ai-automation__subtitle">Datenanalyse in Echtzeit</h3>
+              <p class="ai-automation__text">Erhalten Sie tiefgehende Einblicke durch KI-gestützte Analyse großer Datenmengen.</p>
             </div>
-            <div class="testimonial">
-              <div class="testimonials__stars">
-                <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-              </div>
-              <p class="testimonials__text">
-                "Un corso che ti dà una vera marcia in più nel trading! L'IA è
-                il futuro, e qui ho imparato come sfruttarla al meglio."
-              </p>
-              <p class="testimonials__author">Marco Bianchi</p>
-              <p class="testimonials__position">Investitore Privato</p>
+            <div class="ai-automation__item">
+              <div class="ai-automation__icon">💬</div>
+              <h3 class="ai-automation__subtitle">Intelligente Chatbots</h3>
+              <p class="ai-automation__text">KI-Bots automatisieren Kundenservice und optimieren Interaktionen.</p>
             </div>
-          </div>
-        </section>
-
-        <!-- Sezione Contatti -->
-        <section class="contact-form" id="contatti">
-          <h2 class="contact-form__background-title">Contattaci Ora!</h2>
-          <div class="contact-form__container container">
-            <div class="contact-form__content">
-              <p class="contact-form__text">
-                Iscriviti al nostro corso e inizia il tuo percorso di
-                apprendimento con il supporto dei nostri esperti di trading e
-                intelligenza artificiale.
-              </p>
-              <form id="contactForm" method="post" class="contact-form__form">
-                <div class="contact-form__row">
-                  <input type="text" id="nome" name="nome" placeholder="Nome" required="" class="contact-form__input">
-                  <input type="text" id="cognome" name="cognome" placeholder="Cognome" required="" class="contact-form__input">
-                </div>
-                <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required="" class="contact-form__input">
-                <input type="email" id="emailInput" name="email" placeholder="Email" required="" class="contact-form__input">
-
-                <!-- Checkbox con label corretta -->
-                <div class="contact-form__policy">
-                  <p>
-                    Accetto la <a href="privacy.html">Politica sulla Privacy</a>
-                  </p>
-                </div>
-
-                <button id="submitButton" type="submit" class="contact-form__submit button">
-                  Conferma
-                </button>
-              </form>
+            <div class="ai-automation__item">
+              <div class="ai-automation__icon">⚙️</div>
+              <h3 class="ai-automation__subtitle">Personalisierte Automatisierung</h3>
+              <p class="ai-automation__text">Passen Sie KI-Lösungen an Ihre spezifischen Geschäftsanforderungen an.</p>
             </div>
-            <div id="popupMessage" class="contact-form__thank-you-popup">
-              <p>Grazie! Ti contatteremo a breve.</p>
-            </div>
-          </div>
-        </section>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contactForm");
-            const nomeInput = document.getElementById("nome");
-            const cognomeInput = document.getElementById("cognome");
-            const telefonoInput = document.getElementById("telefono");
-            const emailInput = document.getElementById("emailInput");
-            const submitButton = document.getElementById("submitButton");
-            const popupMessage = document.getElementById("popupMessage");
-
-            function validateForm() {
-              const nomeValue = nomeInput.value.trim();
-              const cognomeValue = cognomeInput.value.trim();
-              const telefonoValue = telefonoInput.value.trim();
-              const emailValue = emailInput.value.trim();
-
-              if (nomeValue && cognomeValue && telefonoValue && emailValue) {
-                submitButton.removeAttribute("disabled");
-              } else {
-                submitButton.setAttribute("disabled", "true");
-              }
-            }
-
-            function showPopupMessage() {
-              popupMessage.style.display = "block";
-              setTimeout(() => {
-                popupMessage.style.display = "none";
-              }, 4000);
-            }
-            form.addEventListener("submit", function (event) {
-              event.preventDefault();
-              showPopupMessage();
-              form.reset();
-              validateForm();
-            });
-
-            [nomeInput, cognomeInput, telefonoInput, emailInput].forEach(
-              (input) => {
-                input.addEventListener("input", validateForm);
-              }
-            );
-
-            validateForm();
-          });
-        </script>
-      </main>
-
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__column">
-            <a class="footer__logo" href="index.htm">
-              <img src="assets/img/Logo11.webp" alt="Logo AI CapCapital" class="footer__logo-img">
-              <span class="footer__logo-text">AI CapCapital</span>
-            </a>
-            <p class="footer__description">
-              La piattaforma di formazione avanzata per il trading con
-              l’Intelligenza Artificiale.
-            </p>
-            <p>© 2025 AI CapCapital - Tutti i diritti riservati.</p>
-          </div>
-
-          <div class="footer__column">
-            <h3 class="footer__title">Collegamenti</h3>
-            <nav class="footer__nav">
-              <a href="#il-corso" class="footer__nav-link">Il Corso</a>
-              <a href="#testimonianze" class="footer__nav-link">Testimonianze</a>
-              <a href="#contatti" class="footer__nav-link">Contattaci</a>
-            </nav>
-          </div>
-
-          <div class="footer__column">
-            <h3 class="footer__title">Politiche</h3>
-            <a href="privacy.html" class="footer__nav-link">Privacy Policy</a>
-            <a href="cookies.html" class="footer__nav-link">Cookie</a>
-            <a href="terms.html" class="footer__nav-link">Termini e Condizioni</a>
-          </div>
-
-          <div class="footer__column">
-            <h3 class="footer__title">Contatti</h3>
-            <p class="footer__nav-link">
-              <a href="https://maps.app.goo.gl/Mfnwyyhkj8E1eFJh7" target="_blank">Italia, Roma</a>
-            </p>
-            <p class="footer__nav-link">
-              <a href="https://maps.app.goo.gl/Mfnwyyhkj8E1eFJh7" target="_blank">
-                Via Taranto, 95, 00182
-              </a>
-            </p>
-            <p class="footer__nav-link">+39 06 46845218</p>
-            <p class="footer__nav-link">info@ai-capcapital.com</p>
           </div>
         </div>
-      </footer>
+      </section>
+
+
+<section class="testimonials" id="ki-automatisierung">
+  <div class="testimonials__container">
+    <h2 class="testimonials__title">Wie KI Ihre Arbeit Automatisiert</h2>
+    <div class="testimonial">
+      <div class="testimonials__stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="testimonials__text">
+        "Dank der KI-gestützten Automatisierung kann ich mich auf die wichtigen Aufgaben konzentrieren, während wiederholte Prozesse automatisch ablaufen."
+      </p>
+      <p class="testimonials__author">Markus Schmidt</p>
+      <p class="testimonials__position">Projektmanager</p>
+    </div>
+    <div class="testimonial">
+      <div class="testimonials__stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="testimonials__text">
+        "KI-gestützte Chatbots haben unsere Kundenkommunikation revolutioniert – schnelle Antworten rund um die Uhr!"
+      </p>
+      <p class="testimonials__author">Julia Weber</p>
+      <p class="testimonials__position">Marketing-Expertin</p>
+    </div>
+    <div class="testimonial">
+      <div class="testimonials__stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="testimonials__text">
+        "Mit KI-gestützten Analysetools erhalte ich tiefe Einblicke in unsere Geschäftsprozesse – das steigert unsere Effizienz enorm."
+      </p>
+      <p class="testimonials__author">Leon Hoffmann</p>
+      <p class="testimonials__position">Datenanalyst</p>
+    </div>
+  </div>
+</section>
+
+
+        
+      </main>
+
+<footer class="ai-footer">
+  <div class="ai-footer__wrapper">
+    <div class="ai-footer__top">
+      <div class="ai-footer__brand">
+        <a href="index.html" class="ai-footer__logo">
+          <img src="assets/img/Logo11.webp" alt="AI Automation Hub">
+          <span>AI Automation Hub</span>
+        </a>
+        <p class="ai-footer__slogan">
+          Effiziente KI-gestützte Lösungen für Ihre Automatisierung.
+        </p>
+      </div>
+      
+      <nav class="ai-footer__menu">
+        <ul>
+          <li><a href="#services">Unsere Services</a></li>
+          <li><a href="#ai-bots">KI-Bots</a></li>
+          <li><a href="#optimierung">Prozessoptimierung</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+      
+      <div class="ai-footer__contact">
+<p>📍 <a href="https://maps.google.com/?q=Berlin, Deutschland" target="_blank">Berlin, Deutschland</a></p>
+<p>📞 <a href="tel:+4930123456789">+49 30 123456789</a></p>
+<p>📧 <a href="mailto:info@ai-automation.de">info@ai-automation.de</a></p>
+
+      </div>
+    </div>
+
+    <div class="ai-footer__bottom">
+      <p>© 2025 AI Automation Hub – Intelligente Automatisierung für Unternehmen.</p>
+    </div>
+  </div>
+</footer>
+
     </div>
   </body>
 </html>
